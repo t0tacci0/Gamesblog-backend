@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-ng#_vecnx1k@6-cdjng39tkjc2a%ep^_qy0w_0n%k8iy0p-3mi
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-t0tacci0-pp5backend-hxwgs98usa0.ws.codeinstitute-ide.net']
+ALLOWED_HOSTS = ['8000-t0tacci0-pp5backend-hxwgs98usa0.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'rest_framework',
 
     'profiles',
 ]
@@ -137,4 +138,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-t0tacci0-pp5backend-hxwgs98usa0.ws.codeinstitute-ide.net/']
+CSRF_TRUSTED_ORIGINS = ['https://8000-t0tacci0-pp5backend-hxwgs98usa0.ws.codeinstitute-ide.net']
