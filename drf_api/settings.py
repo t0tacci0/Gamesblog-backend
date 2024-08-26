@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+import re
 from pathlib import Path
 import os
 import dj_database_url
@@ -54,7 +55,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-t0tacci0-pp5backend-rbhccpiahum.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1', 'gamesblog-f53e2013614c.herokuapp.com']
+ALLOWED_HOSTS = ['8000-t0tacci0-pp5backend-rbhccpiahum.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1', 'gamesblog-f53e2013614c.herokuapp.com', os.environ.get('ALLOWED_HOST'),]
 
 
 # Application definition
@@ -102,10 +103,12 @@ if 'CLIENT_ORIGIN' in os.environ:
      CORS_ALLOWED_ORIGINS = [
          os.environ.get('CLIENT_ORIGIN')
      ]
-else:
-     CORS_ALLOWED_ORIGIN_REGEXES = [
-         "^https://.*\.gitpod\.io$",
-     ]
+     
+if 'CLIENT_ORIGIN_DEV' in os.environ:
+    extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
+    CORS_ALLOWED_ORIGIN_REGEXES = [
+        rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
+    ]
 
 ROOT_URLCONF = 'drf_api.urls'
 
