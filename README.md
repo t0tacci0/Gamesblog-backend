@@ -47,6 +47,62 @@ The link for the GitHub repository to the associated front end can be found [her
   - [ReadMe](#readme)
   - [Acknowledgments](#acknowledgments)
 
+## Deployment
+
+### Heroku
+
+This site is deployed using Heroku and all the steps for a success deployment are on the following:
+
+1. Create a list of requirements in the requirements.txt file by using the command _pip3 freeze > requirements.txt_.
+2. Log in (or sign up) to Heroku.
+3. Click on the _New_ button and select _Create new app_.
+4. Give it a unique name and choose the region.
+5. Click the Settings tab, go to the _Config Vars_ section and click on the _Reveal Config Vars_ button.
+6. Add all variables from env.py to _ConfigVars_ of Heroku.
+7. Click the _Add_ button.
+8. Click the Deploy tab, go to the _Deployment method_ section, select _GitHub_ and confirm this selection by clicking on the _Connect to Github_ button.
+9. Search for the repository name on github and click the _Connect_ button.
+10. Add in the setting.py the Heroku app URL into ALLOWED HOSTS.
+11. Gather all static files of the project by using the command _python3 manage.py collectstatic_ in the terminal.
+12. Make sure that DEBUG=FALSE in settings.py.
+13. Create a _Procfile_ in the root directory and add web: gunicorn fv_api.wsgi.
+13. In Heroku enable the automatic deploy or manually deploy the code from the main branch.
+
+### Local deployment
+
+1. Generate an env.py file in the root directory of the project.
+2. Configure the environment variables within this file.
+3. Create a virtual environment, if neccessary.
+4. Install all required dependencies using _pip install_ command (into the .venv).
+5. Add dependencies to the requirements.txt file using _pip3 freeze > requirements.txt_ command.
+
+### Forking this GitHub repository
+1.  Log in to GitHub.
+2.  Navigate to the repository for this project by selecting [Gamesblog-backend](https://github.com/t0tacci0/Gamesblog-backend)
+3. Click at the top of the repository on the **Fork** button on the right side
+
+### Clone this repository
+1. Log in to GitHub.
+2. Navigate to the repository for this project by selecting [Gamesblog-backend](https://github.com/t0tacci0/Gamesblog-backend)
+3. In the top-right corner, click on the green *Code* button
+4. Copy the HTTPS URL in the tab *Local*
+5. Go to the code editor of your choice and open the terminal
+5. Type `git clone` and paste the URL you copied into your terminal
+6. Press the enter key
+
+### Cloudinary
+1. Navigate to [Cloudinary](https://cloudinary.com/)
+2. Sign up or log in to account
+3. Go to the dashboard
+4. Click on _Go to API Keys_ button
+5. Generate a new API Key
+6. Provide the API environment variable in format: *CLOUDINARY_URL=cloudinary://<your_api_key>:<your_api_secret>@ds5rjhhxu* in _env.py_ and _Config Vars_
+7. Update settings.py
+
+### Create PostgreSQL using Code Institute Database Maker
+1. [CI Database Maker](https://dbs.ci-dbs.net/)
+2. Input your email address
+3. Paste the provided URL in as your DATABASE_URL value
 
 ## Credits
 
