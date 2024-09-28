@@ -22,7 +22,6 @@ The link for the GitHub repository to the associated front end can be found [her
 - [User Experience](#user-experience)
 - [Structure](#structure)
 - [Database](#database)
-  - [Models](#models)
 - [API Endpoints](#api-endpoints)
 - [Bugs](#bugs)
 - [Technologies Used](#technologies-used)
@@ -44,6 +43,46 @@ The link for the GitHub repository to the associated front end can be found [her
 - [Credits](#credits)
   - [Code](#code)
   - [Acknowledgments](#acknowledgments)
+
+## User Experience
+
+I used an Agile methodology approach to plan this project. This was implemented through the GitHub Project board with milestones, epics, user stories and tasks.
+Each user story was classified with a label according to MoSCoW prioritization.<br>
+The Kanban board can be seen [here]().<br>
+
+## Structure
+
+The database schema was created with [dbdiagramm](https://dbdiagram.io/home). 
+
+Final ERD:<br>
+![Final Database Schema](documentation/diagramm_pp5_back.png)<br>
+
+## Database<br>
+I used a PostgreSQL provided by Code Institute as relational database.<br>
+
+- **Relationships:**<br>
+  - User to Profile: One-to-One
+  - User to Comment: One-to-Many
+  - User to Favourite: One-to-Many
+  - User to Post: One-to-Many
+  - User to Follower: One-to-Many
+  - Post to Comment: One-to-Many
+  - Post to Favourite: One-to-Many
+  - Favourite to User: Many-to-Many (through owner)
+  - Favourite to Post: Many-to-Many (through post)
+  - Follower to User (as owner): Many-to-Many
+  - Follower to Followed User: Many-to-Many<br><br>
+
+>
+A welcome message is displayed when you first enter the API site.
+
+![Screenshot of welcome message](documentation/welcome_api.png)<br>
+
+
+### Features, which I would like to implement in the future
+
+- *Contact assistance Form*: "Integrate a easy contact form for any users having questions." <br>
+- *User-to-User Messaging*: "Implement a direct messaging feature to facilitate communication between users with the option to share images to use for the website."<br>
 
 ## API Endpoints
 
@@ -76,6 +115,22 @@ The endpoints provided by the API are:<br>
 |                                    | PUT         | Update         |
 |                                    | DELETE      | Delete         |
 
+
+## Bugs
+
+<details>
+<summary> 500 Server error </summary>
+<br>
+When attempting to click on SignUP or SignIn pages a conflict btw database server and the project occured.After so many attempts and help from tutor service many times,i found the issue.I had to modify some of the packages in requirements.txt to old version instead and create another database with new migrations.I want to say many thanks to tutor assistance for great support.
+
+<br>
+<br>
+
+![Screenshot of the error message in browser](documentation/bug(1).png)<br>
+![Screenshot of the error message in browser](documentation/bug(2).png)<br>
+![Screenshot of the error message in browser](documentation/bug(3).png)<br>
+![Screenshot of the error message in browser](documentation/bug(4).png)<br>
+</details>
 
 ## Technologies Used
 
