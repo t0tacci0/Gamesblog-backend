@@ -27,6 +27,7 @@ class PostListViewTests(APITestCase):
         response = self.client.post('/posts/', {'title': 'a title'})
         self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)
 
+
 class PostDetailViewTests(APITestCase):
     def setUp(self):
         adam = User.objects.create_user(username='adam', password='pass')
@@ -57,4 +58,4 @@ class PostDetailViewTests(APITestCase):
     def test_user_cant_update_another_users_post(self):
         self.client.login(username='adam', password='pass')
         response = self.client.put('/posts/2/', {'title': 'a new title'})
-        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)        
+        self.assertEqual(response.status_code, status.HTTP_403_FORBIDDEN)

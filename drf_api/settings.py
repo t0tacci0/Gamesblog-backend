@@ -19,8 +19,8 @@ if os.path.exists('env.py'):
     import env
 
 CLOUDINARY_STORAGE = {
-    'CLOUDINARY_URL' : os.environ.get('CLOUDINARY_URL')
-}    
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+}
 
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -63,8 +63,10 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
-ALLOWED_HOSTS = ['8000-t0tacci0-pp5backend-rbhccpiahum.ws.codeinstitute-ide.net', 'localhost', '127.0.0.1', 'gamesblog-f53e2013614c.herokuapp.com', os.environ.get('ALLOWED_HOST'),]
-
+ALLOWED_HOSTS = [
+    '8000-t0tacci0-pp5backend-rbhccpiahum.ws.codeinstitute-ide.net',
+    'localhost', '127.0.0.1', 'gamesblog-f53e2013614c.herokuapp.com',
+    os.environ.get('ALLOWED_HOST'), ]
 
 # Application definition
 
@@ -112,7 +114,7 @@ if 'CLIENT_ORIGIN' in os.environ:
     ]
 
 if 'CLIENT_ORIGIN_DEV' in os.environ:
-    CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.codeinstitute-ide\.net$",]
+    CORS_ALLOWED_ORIGIN_REGEXES = [r"^https://.*\.codeinstitute-ide\.net$", ]
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -145,14 +147,14 @@ WSGI_APPLICATION = 'drf_api.wsgi.application'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 if 'DEV' in os.environ:
-     DATABASES = {
+    DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.sqlite3',
              'NAME': BASE_DIR / 'db.sqlite3',
          }
      }
 else:
-     DATABASES = {
+    DATABASES = {
          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
      }
 
