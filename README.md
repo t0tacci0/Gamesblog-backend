@@ -47,6 +47,52 @@ The link for the GitHub repository to the associated front end can be found [her
   - [ReadMe](#readme)
   - [Acknowledgments](#acknowledgments)
 
+## Technologies Used
+
+### Languages:
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Tools:
+- [Git](https://git-scm.com/) Used in Gitpod terminal to commit to Git and Push to GitHub.
+- [GitHub](https://github.com/) Used to store file for the project.
+- [GitHub Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects) Used for Agile sprint planning and task tracking.
+- [Heroku](https://www.heroku.com) Used to deploy application.
+- [CI Gitpod](https://codeinstitute-ide.net/) IDE.
+- [Code Insitute Database Maker](https://dbs.ci-dbs.net/) PostgreSQL database.
+- [Background remover](https://www.remove.bg/) Used to remove background logo.
+- [LanguageTool](https://languagetool.org/) Used to check the grammar and spelling in the README and the Code. 
+- [Cloudinary](https://cloudinary.com/) Used to store the item images.
+- [Canva](https://www.canva.com/) Used to create Logo.
+- [Favicon.io](https://favicon.io/favicon-generator/) Used to create the favicon.
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools?hl=de) Used to check the application for responsiveness and errors. 
+
+### Frameworks:  
+- [Django Rest Framework](https://www.django-rest-framework.org/)
+- [Django](https://en.wikipedia.org/wiki/Django_(web_framework))
+
+### Libraries and modules:
+- [os](https://docs.python.org/3/library/os.html) Provides functions to interact with the operating system. 
+- [sys](https://docs.python.org/3/library/sys.html) Used to get system-specific functions.
+- [datetime](https://docs.python.org/3/library/time.html) Supplies classes for manipulating dates and times.
+- [Gunicorn](https://gunicorn.org/) Provides a way to serve Python web applications.
+- [Pycopg 2](https://pypi.org/project/psycopg2/) PostgreSQL database adapter for Python.
+- [sqlparse](https://pypi.org/project/sqlparse/): A non-validating SQL parser for Python.
+- [dj_database_url](https://pypi.org/project/dj-database-url/) Enables the ability to represent their database settings via a string.
+- [django-cloudinary-storage](https://pypi.org/project/django-cloudinary-storage/): Used to connect Cloudinary as Django file storage.
+- [django-cors-headers](https://pypi.org/project/django-cors-headers/): Handle Cross-Origin Resource Sharing in Django.
+- [django-filter](https://pypi.org/project/django-filter/): Provides filtering with URL parameters for querysets.
+- [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/): Used to handle user registration, login, and logout.
+- [djangorestframework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html): JSON Web Token authentication for Django REST Framework.
+- [oauthlib](https://oauthlib.readthedocs.io/en/latest/): A generic, spec-compliant, thorough implementation of the OAuth request-signing logic.
+- [PyJWT](https://pyjwt.readthedocs.io/en/stable/): JSON Web Token implementation in Python.
+- [python3-openid](https://pypi.org/project/python3-openid/): A library for implementing OpenID in Python.
+- [requests-oauthlib](https://pypi.org/project/requests-oauthlib/): OAuth library that implements the client side of the OAuth protocol.
+- [dj-database-url](https://pypi.org/project/dj-database-url/): A simple utility to allow using Database URLs in Django.
+- [whitenoise](https://whitenoise.readthedocs.io/en/latest/): A Django middleware to serve static files.
+- [asgiref](https://github.com/django/asgiref): ASGI (Asynchronous Server Gateway Interface) reference library, used by Django for handling asynchronous web protocols.
+- [pillow](https://pypi.org/project/pillow/): A Python Imaging Library (PIL) fork, adding image processing capabilities to your Python applications.
+
+
 ## Deployment
 
 ### Heroku
