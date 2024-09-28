@@ -33,7 +33,6 @@ The link for the GitHub repository to the associated front end can be found [her
 - [Testing](#testing)
   - [Python Validator Testing](#python-validator-testing)
   - [Manual testing](#manual-testing)
-  - [Automated Testing](#automated-testing)
   - [Browser Compatibility](#browser-compatibility)
 - [Deployment](#deployment)
   - [Heroku](#heroku)
@@ -44,8 +43,39 @@ The link for the GitHub repository to the associated front end can be found [her
   - [Create PostgreSQL using Code Institute Database Maker](#create-postgresql-using-code-institute-database-maker)
 - [Credits](#credits)
   - [Code](#code)
-  - [ReadMe](#readme)
   - [Acknowledgments](#acknowledgments)
+
+## API Endpoints
+
+The endpoints provided by the API are:<br>
+
+| Endpoint                           | HTTP Method | CRUD Operation |
+|------------------------------------|-------------|----------------|
+| /dj-rest-auth/registration/        | POST        | N/A            |
+| /dj-rest-auth/login/               | POST        | N/A            |
+| /dj-rest-auth/logout/              | POST        | N/A            |
+| /profiles/                         | GET         | Read           |
+| /profiles/\<int:pk\>/              | GET         | Read           |
+|                                    | PUT         | Update         |
+| /comments/                         | GET         | Read           |
+|                                    | POST        | Create         |
+| /comments/\<int:pk\>               | GET         | Read           |
+|                                    | PUT         | Update         |
+|                                    | DELETE      | Delete         |
+| /followers/                        | GET         | Read           |
+|                                    | POST        | Create         |
+| /followers/\<int:pk\>/             | GET         | Read           |
+|                                    | DELETE      | Delete         |
+| /likes/                            | GET         | Read           |
+|                                    | POST        | Create         |
+| /likes/\<int:pk\>/                 | GET         | Read           |
+|                                    | DELETE      | Delete         |
+| /posts/                            | GET         | Read           |
+|                                    | POST        | Create         |
+| /posts/\<int:pk\>/                 | GET         | Read           |
+|                                    | PUT         | Update         |
+|                                    | DELETE      | Delete         |
+
 
 ## Technologies Used
 
@@ -92,6 +122,49 @@ The link for the GitHub repository to the associated front end can be found [her
 - [asgiref](https://github.com/django/asgiref): ASGI (Asynchronous Server Gateway Interface) reference library, used by Django for handling asynchronous web protocols.
 - [pillow](https://pypi.org/project/pillow/): A Python Imaging Library (PIL) fork, adding image processing capabilities to your Python applications.
 
+## Testing
+
+The app was tested regularly and deployed to Heroku to make sure both local and remote worked the same.
+
+### Python Validator Testing
+
+- All created python files were checked with the [Code Insitute validator - CI Python Linter](https://pep8ci.herokuapp.com/#). <br>
+
+### Manual Testing
+
+- *URL Path Verification*: Confirmed that all URL endpoints were correctly set up and functioning as expected, with no errors encountered during navigation.<br>
+- *CRUD Operations Validation*: Conducted thorough testing of the create, read, update, and/or delete operations across various entities, including: comments, profiles, followers, and like.
+  - Successfully created new entries and ensured the corresponding URLs were working properly.
+  - Verified the update functionality, ensuring data could be correctly modified (with the exception of followers and likes).
+  - Performed delete operations to confirm that comments could be removed as intended.<br>
+- Profiles Page:
+  -  1 Description: Make sure the created profiles are listed.
+  -  2 Step: Go to the /profiles page for the API Check that all the created profiles are displayed in a list.
+  -  3 Expected: I should be able to see all the created profiles in a list.<br><br>
+- Posts Page:
+  -  1 Description: Make sure the posts list are displayed.
+  -  2 Step: Go to the /posts page for the API Check that all the created posts are displayed in a list.
+  -  3 Expected: I should be able to see all the created posts in a list.<br><br>
+- Followers Page:
+  -  1 Description: Make sure the followers counts are listed
+  -  2 Step: Go to the /followers page for the API Check that the followers are displayed in a list.
+  -  3 Expected: I should be able to see all the profiles that got a follower, and which follower that is.<br><br>
+- Comments Page:
+  -  1 Description: Make sure all the created comments are listed.
+  -  2 Step: Go to the /comments page for the API Check that the created comments are listed.
+  -  3 Expected: I should be able to see all the created comments.<br><br>
+- Likes Page:
+  -  1 Description: Make sure likes counts are listed.
+  -  2 Step: Go to the /like page for the API Check that the favourites are displayed in a list.
+  -  3 Expected: I should be able to see post that are marked with a heart been like. <br><br>
+
+These manual tests were conducted to ensure that the API operates smoothly and behaves as intended.
+
+### Browser Compatibility
+
+  The tests were conducted using the following browser:
+
+- Google Chrome Version 127.0.6533.120 
 
 ## Deployment
 
