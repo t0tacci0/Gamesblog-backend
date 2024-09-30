@@ -48,7 +48,7 @@ The link for the GitHub repository to the associated front end can be found [her
 
 I used an Agile methodology approach to plan this project. This was implemented through the GitHub Project board with milestones, epics, user stories and tasks.
 Each user story was classified with a label according to MoSCoW prioritization.<br>
-The Kanban board can be seen [here]().<br>
+The Kanban board can be seen [here](https://github.com/users/t0tacci0/projects/6/views/1).<br>
 
 ## Structure
 
