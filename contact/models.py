@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class ContactModel(models.Model):
     """
     Model to handle the messages from the contact form.
@@ -13,9 +14,10 @@ class ContactModel(models.Model):
     contact_message = models.TextField(max_length=750)
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
-    
+
+
     class Meta:
         ordering = ["-created_at"]
-    
+
     def __str__(self):
         return f"Contact message from {self.contact_name} : {self.contact_topic}"
